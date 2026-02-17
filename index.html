@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>React App</title>
+
+	<!-- React -->
+	<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+	<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+	<!-- Babel -->
+	<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+
+	<div id="root"></div>
+
+	<script type="text/babel"> // jsx ishlatish uchun babelni ishlatishimiz kerak, shuning uchun type ni text/babel qilamiz
+
+		const App = () => {
+			//function component
+			const title = "Hello World"
+			const subtitle = "Welcome to React"
+			const adress = "https://www.youtube.com/channel/UCWv7vMbMWH4-V0ZXdmDpPBA"
+			return (
+				<div className="app">
+					<h1>{title.toUpperCase()}</h1>
+					<h3>{subtitle}</h3>
+
+					<p>Today date is: {new Date().toLocaleDateString()}</p>
+					<p>Random number {Math.floor(Math.random() * 100)}</p>
+					<a href={adress}>My youtube chanel</a>
+				</div>
+				// <div></div> // return ichida bitta element bo'lishi kerak, shuning uchun div ichida hamma narsani o'rab olishimiz kerak 
+				// parent div bo`ladi return ichida 
+			)
+
+		}
+		const main = ReactDOM.createRoot(document.getElementById('root'))
+		main.render(<App />)
+	</script>
+
+</body>
+
+</html>
