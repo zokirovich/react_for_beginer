@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+.title {
+  display: inline-block;
+  padding: 30px 60px;
+  background: #61dafb;
+  color: #fff; 
+  border-radius: 8px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.subTitlle {
+  display: inline-block;
+  color: #555;
+  font-weight: normal;  
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  margin-top: 10px;
+  margin-bottom: 60px;
+}
+
+
