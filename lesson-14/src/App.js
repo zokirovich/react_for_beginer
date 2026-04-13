@@ -3,6 +3,8 @@ import './App.css'
 import Hyper from './components/Hyper'
 import Title from './components/Title'
 
+import { Fragment } from 'react'
+
 // import Title from './components/Title'
 function App() {
 // useState
@@ -28,10 +30,14 @@ function App() {
    setName('Farrux')
    
   }
+
+  // bu yerda biz elementlarni keyga bog`lab ularni ishlatishni ko`rib chiqamiz
+  let subText = 'All events will be here'
+  let title = 'Shokir kingdom`s events'
   return (
     
     <div className="App">
-      <Title title = 'Shokir kingdom`s events' subText = 'All events will be here' />
+      <Title title = {title} subText = {subText} />
       <Hyper titleHyper = 'HyperText Markup Language' /> 
       <button onClick={handleClick}>Change name</button>
       <br />
@@ -44,10 +50,10 @@ function App() {
           {events.length === 0 && <h2> Not Content :( </h2>} {
          showContent && events.map((event) => {
             return (
-              <div key={event.id}>
+              <Fragment key={event.id}>
                 <h2>{event.title.charAt(0).toUpperCase()+ event.title.slice(1).toLowerCase()}</h2>
                 <button onClick={() => hanleDelete(event.id)}>delete</button>
-              </div> 
+              </Fragment> 
             )
           })
         }
