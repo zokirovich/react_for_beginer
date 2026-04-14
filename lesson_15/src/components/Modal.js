@@ -1,6 +1,6 @@
 import './Modal.css'
 
-function Modal({children}) {
+function Modal({children,closeModal}) {
 
 	// console.log(props)
 	// console.log(props)
@@ -8,6 +8,9 @@ function Modal({children}) {
 		<div className='modal-backdrop'> 
 			<div className='modal'>
 			   {children}
+				 <br />
+				 <br />
+				 <button onClick={closeModal}>Remove click</button>
 			</div>
 		</div>
 	)

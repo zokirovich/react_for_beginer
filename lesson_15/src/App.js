@@ -10,7 +10,7 @@ import Modal from './components/Modal'
 function App() {
 // useState
   const [name, setName] = useState('Shokir')
-
+  const [showModal,setShowModal] = useState(false)
   const [events,setEvents] = useState([
     {title:'shokir`s birthday',id: '1'}, 
     {title:'farrux live stream',id: '2'},
@@ -26,6 +26,11 @@ function App() {
         
    }))
   } 
+
+  // closeModal btn
+  const closeModal = () => {
+    setShowModal(false)
+  }
 
   const handleClick = () => {
    setName('Farrux')
@@ -59,13 +64,15 @@ function App() {
         }
         </div>        
       }
-      <Modal>
+      {showModal && <Modal closeModal = {closeModal}>
         {/* <h2>Shokir Samandarov telegram chanel</h2>
 			  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque nostrum fugit officia et, minus perspiciatis.</p> */}
         <h2>Shokir Samandarov telegram chanel</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est corrupti ea accusamus neque eum! Delectus, laboriosam minus. Eius mollitia tempora, veniam possimus repellendus ducimus nostrum eveniet similique laboriosam facere nulla magni officiis, non libero iure vitae, voluptate quae. Mollitia cumque voluptate reiciendis vero quos adipisci vitae reprehenderit sint culpa dignissimos?</p>
-        <a href="">Substrice</a>
-      </Modal>
+        <a href="https://react.dev/link/react-devtools">Substrice</a>
+      </Modal>}
+      <br />
+      <button onClick={() => {setShowModal(true)}}>Click add</button>
     </div>
   );
 }
