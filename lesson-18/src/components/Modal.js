@@ -19,11 +19,7 @@ function Modal({children,closeModal, isModeModal}) {
 			   {children}
 				 <br />
 				
-				 <button  className='modal-btn' onClick={closeModal} style={{
-					display: 'flex',
-					justifyContent: 'center',
-					alignItems: 'center'
-				 }}>Remove click</button>
+				 <button  className={isModeModal ?'modal-btn' : ""} onClick={closeModal} >Remove click</button>
 			</div>
 		</div>
 	),document.body)

@@ -19,3 +19,14 @@
 	border-bottom: 2px solid #282828;
 	padding-bottom: 25px;
 }
+
+
+.modal-btn {
+  background-color: rgb(68, 97, 242);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
