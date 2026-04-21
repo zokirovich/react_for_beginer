@@ -1,0 +1,18 @@
+.card-list {
+	border: 1px solid #eee;
+	box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.05);
+	padding: 10px;
+	max-width: 400px;
+	margin: 20px auto;
+	
+}
+
+.card-list button {
+	background-color: #555;
+	color: white;
+	border-radius: 6px;
+}
+.card-list:hover {
+	box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.1);
+	box-sizing: border-box;
+}
