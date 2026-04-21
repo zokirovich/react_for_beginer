@@ -1,5 +1,6 @@
 import ReactDOM from 'react-dom'
 import './Modal.css'
+import './NewEventForm'
 function Modal({children,closeModal, isModeModal}) {
 
 	// console.log(props)
@@ -19,7 +20,7 @@ function Modal({children,closeModal, isModeModal}) {
 			   {children}
 				 <br />
 				
-				 <button  className={isModeModal ?'modal-btn' : ""} onClick={closeModal} >Remove click</button>
+				 <button  className={isModeModal ?'modal-btn' : ""}  onClick={closeModal} >Remove click</button>
 			</div>
 		</div>
 	),document.body)

@@ -1,11 +1,10 @@
 import { useState } from 'react'
 import './App.css'
-import Hyper from './components/Hyper'
-import Title from './components/Title'
-
 import EventList from './components/EventList'
+import Hyper from './components/Hyper'
 import Modal from './components/Modal'
 import NewEventForm from './components/NewEventForm'
+import Title from './components/Title'
 
 // import Title from './components/Title'
 function App() {
@@ -20,7 +19,8 @@ function App() {
   
 // showContent
  const [showContent, setShowContent] = useState(true)
-  // handle delete function
+ 
+// handle delete function
   const hanleDelete = (id) => {
     setEvents(events.filter((event) => {
       return event.id !== id

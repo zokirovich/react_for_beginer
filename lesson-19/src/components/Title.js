@@ -1,4 +1,3 @@
-import { Fragment } from 'react/jsx-runtime'
 import './Title.css'
 const Title = ({title,subText}) => {
 	// console.log(props) 
@@ -8,9 +7,7 @@ const Title = ({title,subText}) => {
 			<h1 className='title'>{title}</h1>
 			<br />
 			<p className='subTitle'>{subText}</p>
-		</div>
-
-		
+		</div>	
 	)
 
 }

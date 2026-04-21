@@ -8,3 +8,7 @@
 	box-sizing: border-box;
 	font-size: 1.2em;
 }
+.new-event-form .subBtn {
+   background-color: cornflowerblue;
+	 color: white;
+}
