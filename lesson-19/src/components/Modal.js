@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom'
 import './Modal.css'
 import './NewEventForm'
-function Modal({children,closeModal, isModeModal}) {
+function Modal({children}) {
 
 	// console.log(props)
 	// console.log(props)
@@ -10,7 +10,7 @@ function Modal({children,closeModal, isModeModal}) {
 			<div className='modal' style={{
 				border: '4px solid',
 				// ternary operator isModeModal true bo`lsa borderColor ni yellowgreen qil, false bo`lsa red qil 
-				borderColor:isModeModal ? 'yellowgreen' : 'red',
+				borderColor:'yellowgreen' ,
 				textAlign: 'center',
 				padding: '20px',
 				background: '#fff',
@@ -18,9 +18,7 @@ function Modal({children,closeModal, isModeModal}) {
 				margin: '100px auto'
 			}}>
 			   {children}
-				 <br />
 				
-				 <button  className={isModeModal ?'modal-btn' : ""}  onClick={closeModal} >Remove click</button>
 			</div>
 		</div>
 	),document.body)
